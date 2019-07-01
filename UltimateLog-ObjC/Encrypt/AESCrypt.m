@@ -28,6 +28,7 @@
 //
 
 #import "AESCrypt.h"
+#import <Foundation/Foundation.h>
 
 
 
@@ -38,7 +39,9 @@
         return nil;
     }
     NSData *encryptedData = [[message dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptedDataUsingKey:[[password dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash] error:nil];
-    NSString *base64EncodedString = [NSString base64StringFromData:encryptedData length:[encryptedData length]];
+//    NSString *base64EncodedString = [NSString base64StringFromData:encryptedData length:[encryptedData length]];
+    NSString *base64EncodedString = [encryptedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+
     return base64EncodedString;
 }
 
@@ -57,8 +60,15 @@
     if (message == nil) {
         return nil;
     }
-    NSData *encryptedData = [[message dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptedDataUsingKey:passwordDataKey error:nil];
-    NSString *base64EncodedString = [NSString base64StringFromData:encryptedData length:[encryptedData length]];
+    NSError *error = nil;
+    NSData *encryptedData = [[message dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptedDataUsingKey:passwordDataKey error:&error];
+    
+    if (error != nil){
+        NSLog(@"Encrypt Error : %@", error);
+        return nil;
+    }
+//    NSString *base64EncodedString = [NSString base64StringFromData:encryptedData length:[encryptedData length]];
+    NSString *base64EncodedString = [encryptedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     return base64EncodedString;
 }
 

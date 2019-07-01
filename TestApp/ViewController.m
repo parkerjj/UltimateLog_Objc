@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [UltimateLog setupWithPrefix:@"TEST" withConsoleFilter:ULogFilterLevelVerbose withLogFilter:ULogFilterLevelVerbose withEncryptSeed:@"TEST"];
+    [UltimateLog setupWithPrefix:@"StarStar" withConsoleFilter:ULogFilterLevelVerbose withLogFilter:ULogFilterLevelVerbose withEncryptSeed:@"TEST"];
     
     [UltimateLog vWithTag:@"TEST" withMessage:@"This is VERBOSE"];
     [UltimateLog dWithTag:@"TEST" withMessage:@"This is DEBUG"];
@@ -29,6 +29,9 @@
     [UltimateLog wWithTag:@"TEST" withMessage:@"This is WARNING"];
     [UltimateLog eWithTag:@"TEST" withMessage:@"This is ERROR"];
     [UltimateLog fWithTag:@"TEST" withMessage:@"This is FATAL"];
+    
+    
+    [UltimateLog vWithTag:@"TEST" withMessage:@"%@",@"Test123"];
     
     NSLog(@"ZipLog: %@", [UltimateLog zipLog]);
     

@@ -83,9 +83,8 @@ static UltimateLog *sharedInstance;
         return;
     }
     
-    NSData *password = [[[[NSString stringWithFormat:@"%@%@",[seed SHA256Hex],seed] uppercaseString] dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash];
+    NSData *password = [[[[[NSString stringWithFormat:@"%@%@",[seed SHA256Hex],seed] uppercaseString] dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash] copy];
     NSString *originKey = [seed SHA256Hex];
-    
     NSString *encryptKey = [AESCrypt encrypt:originKey passwordDataKey:password];
     if (encryptKey != nil){
         [[UltimateLog sharedInstance] setEncryptKey:[[encryptKey dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash]];
@@ -199,14 +198,19 @@ static UltimateLog *sharedInstance;
         tag = @"ULog";
     }
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelVerbose withTag:tag withMessage:msg];
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
+
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelVerbose tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-        }
-    });
+    [sharedInstance printLogWithLevel:ULogFilterLevelVerbose withTag:tag withMessage:str];
+    
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelVerbose tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+    }
+    
 }
 
 + (void)dWithTag:(NSString*)tag withMessage:(NSString *)msg, ... NS_FORMAT_FUNCTION(2,3){
@@ -216,14 +220,17 @@ static UltimateLog *sharedInstance;
         tag = @"ULog";
     }
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelDebug withTag:tag withMessage:msg];
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
+
+    [sharedInstance printLogWithLevel:ULogFilterLevelDebug withTag:tag withMessage:str];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelDebug tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-        }
-    });
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelDebug tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+    }
 }
 
 + (void)iWithTag:(NSString*)tag withMessage:(NSString *)msg, ... NS_FORMAT_FUNCTION(2,3){
@@ -232,15 +239,17 @@ static UltimateLog *sharedInstance;
     if (tag == nil){
         tag = @"ULog";
     }
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
+
+    [sharedInstance printLogWithLevel:ULogFilterLevelInfo withTag:tag withMessage:str];
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelInfo withTag:tag withMessage:msg];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelInfo tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-        }
-    });
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelInfo tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+    }
 }
 
 
@@ -251,14 +260,17 @@ static UltimateLog *sharedInstance;
         tag = @"ULog";
     }
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelWarn withTag:tag withMessage:msg];
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
+
+    [sharedInstance printLogWithLevel:ULogFilterLevelWarn withTag:tag withMessage:str];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelWarn tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-        }
-    });
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelWarn tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+    }
 }
 
 
@@ -269,15 +281,18 @@ static UltimateLog *sharedInstance;
         tag = @"ULog";
     }
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelError withTag:tag withMessage:msg];
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
+
+    [sharedInstance printLogWithLevel:ULogFilterLevelError withTag:tag withMessage:str];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelError tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-            [sharedInstance.mars flush];
-        }
-    });
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelError tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+        [sharedInstance.mars flush];
+    }
 }
 
 + (void)fWithTag:(NSString*)tag withMessage:(NSString *)msg, ... NS_FORMAT_FUNCTION(2,3){
@@ -287,16 +302,19 @@ static UltimateLog *sharedInstance;
         tag = @"ULog";
     }
     
-    [sharedInstance printLogWithLevel:ULogFilterLevelFatal withTag:tag withMessage:msg];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSString *encryptedString = [sharedInstance encrypt:msg];
-        if (encryptedString != nil && encryptedString.length > 0){
-            [sharedInstance.mars log:(int)ULogFilterLevelFatal tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
-            [sharedInstance.mars flush];
+    va_list args;
+    va_start(args, msg);
+    NSString *str = [[NSString alloc] initWithFormat:msg arguments:args];
+    va_end(args);
 
-        }
-    });
+    [sharedInstance printLogWithLevel:ULogFilterLevelFatal withTag:tag withMessage:str];
+    
+    NSString *encryptedString = [sharedInstance encrypt:msg];
+    if (encryptedString != nil && encryptedString.length > 0){
+        [sharedInstance.mars log:(int)ULogFilterLevelFatal tag:[tag cStringUsingEncoding:NSUTF8StringEncoding] content:encryptedString];
+        [sharedInstance.mars flush];
+        
+    }
 }
 
 
