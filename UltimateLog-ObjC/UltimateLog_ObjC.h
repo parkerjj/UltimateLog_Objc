@@ -17,3 +17,12 @@ FOUNDATION_EXPORT const unsigned char UltimateLog_ObjCVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <UltimateLog_ObjC/PublicHeader.h>
 
 
+
+#import <CommonCrypto/CommonHMAC.h>
+#import "UltimateLog.h"
+
+
+
+#define LogFormat( s, ... )     [NSString stringWithFormat:(s), ##__VA_ARGS__]
+
+

@@ -8,12 +8,240 @@
 
 /* Begin PBXBuildFile section */
 		E32F6DE022C34B2F00DF1537 /* UltimateLog_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DDE22C34B2F00DF1537 /* UltimateLog_ObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32F6E0522C34B5800DF1537 /* MarsWapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DE722C34B5700DF1537 /* MarsWapper.m */; };
+		E32F6E0622C34B5800DF1537 /* log_crypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DE922C34B5700DF1537 /* log_crypt.cc */; };
+		E32F6E0722C34B5800DF1537 /* LogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DEA22C34B5700DF1537 /* LogUtil.m */; };
+		E32F6E0822C34B5800DF1537 /* log_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DEB22C34B5700DF1537 /* log_crypt.h */; };
+		E32F6E0922C34B5800DF1537 /* LogHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DEC22C34B5700DF1537 /* LogHelper.mm */; };
+		E32F6E0A22C34B5800DF1537 /* LogUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DED22C34B5700DF1537 /* LogUtil.h */; };
+		E32F6E0B22C34B5800DF1537 /* LogHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DEE22C34B5700DF1537 /* LogHelper.h */; };
+		E32F6E0C22C34B5800DF1537 /* UltimateLogOnMars.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DEF22C34B5700DF1537 /* UltimateLogOnMars.mm */; };
+		E32F6E0D22C34B5800DF1537 /* MarsWapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF022C34B5700DF1537 /* MarsWapper.h */; };
+		E32F6E0E22C34B5800DF1537 /* UltimateLogOnMars.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF122C34B5700DF1537 /* UltimateLogOnMars.h */; };
+		E32F6E0F22C34B5800DF1537 /* projdef.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF422C34B5800DF1537 /* projdef.h */; };
+		E32F6E1022C34B5800DF1537 /* string_cast.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF522C34B5800DF1537 /* string_cast.h */; };
+		E32F6E1122C34B5800DF1537 /* http.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF622C34B5800DF1537 /* http.h */; };
+		E32F6E1222C34B5800DF1537 /* has_member.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF722C34B5800DF1537 /* has_member.h */; };
+		E32F6E1322C34B5800DF1537 /* comm_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF822C34B5800DF1537 /* comm_data.h */; };
+		E32F6E1422C34B5800DF1537 /* verinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DF922C34B5800DF1537 /* verinfo.h */; };
+		E32F6E1522C34B5800DF1537 /* ThreadOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFA22C34B5800DF1537 /* ThreadOperationQueue.h */; };
+		E32F6E1622C34B5800DF1537 /* time_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFB22C34B5800DF1537 /* time_utils.h */; };
+		E32F6E1722C34B5800DF1537 /* nat64_prefix_util.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFC22C34B5800DF1537 /* nat64_prefix_util.h */; };
+		E32F6E1822C34B5800DF1537 /* local_ipstack.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFD22C34B5800DF1537 /* local_ipstack.h */; };
+		E32F6E1922C34B5800DF1537 /* scope_autoreleasepool.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFE22C34B5800DF1537 /* scope_autoreleasepool.h */; };
+		E32F6E1A22C34B5800DF1537 /* strutil.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DFF22C34B5800DF1537 /* strutil.h */; };
+		E32F6E1B22C34B5800DF1537 /* appender.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E0122C34B5800DF1537 /* appender.h */; };
+		E32F6E1C22C34B5800DF1537 /* xlogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E0222C34B5800DF1537 /* xlogger.h */; };
+		E32F6E1D22C34B5800DF1537 /* xloggerbase.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E0322C34B5800DF1537 /* xloggerbase.h */; };
+		E32F6E1E22C34B5800DF1537 /* preprocessor.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E0422C34B5800DF1537 /* preprocessor.h */; };
+		E32F6E2322C34BBD00DF1537 /* libMars.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2222C34BBD00DF1537 /* libMars.a */; };
+		E32F6E2622C34BDA00DF1537 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2522C34BDA00DF1537 /* CoreTelephony.framework */; };
+		E32F6E2822C34BE300DF1537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2722C34BE300DF1537 /* Foundation.framework */; };
+		E32F6E2D22C34C0000DF1537 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2C22C34C0000DF1537 /* Security.framework */; };
+		E32F6E2F22C34C0500DF1537 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2E22C34C0500DF1537 /* SystemConfiguration.framework */; };
+		E32F6E3122C34C0F00DF1537 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E3022C34C0F00DF1537 /* UIKit.framework */; };
+		E32F6E3322C34C3400DF1537 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6E2B22C34BFB00DF1537 /* libz.tbd */; };
+		E32F6E3622C34DD600DF1537 /* UltimateLog.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E3422C34DD600DF1537 /* UltimateLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32F6E3722C34DD600DF1537 /* UltimateLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E3522C34DD600DF1537 /* UltimateLog.m */; };
+		E32F6E3A22C3608300DF1537 /* LoggerUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E3822C3608300DF1537 /* LoggerUtility.h */; };
+		E32F6E3B22C3608300DF1537 /* LoggerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E3922C3608300DF1537 /* LoggerUtility.m */; };
+		E32F6E4622C3629A00DF1537 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E3E22C3629A00DF1537 /* NSString+Base64.m */; };
+		E32F6E4722C3629A00DF1537 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E3F22C3629A00DF1537 /* AESCrypt.m */; };
+		E32F6E4822C3629A00DF1537 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E4022C3629A00DF1537 /* NSData+Base64.h */; };
+		E32F6E4922C3629A00DF1537 /* NSData+CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E4122C3629A00DF1537 /* NSData+CommonCrypto.h */; };
+		E32F6E4A22C3629A00DF1537 /* AESCrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E4222C3629A00DF1537 /* AESCrypt.h */; };
+		E32F6E4B22C3629A00DF1537 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E4322C3629A00DF1537 /* NSString+Base64.h */; };
+		E32F6E4C22C3629A00DF1537 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E4422C3629A00DF1537 /* NSData+CommonCrypto.m */; };
+		E32F6E4D22C3629A00DF1537 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E4522C3629A00DF1537 /* NSData+Base64.m */; };
+		E32F6E5022C3630000DF1537 /* NSString+CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6E4E22C3630000DF1537 /* NSString+CommonCrypto.h */; };
+		E32F6E5122C3630000DF1537 /* NSString+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E4F22C3630000DF1537 /* NSString+CommonCrypto.m */; };
+		E32F6E5A22C4BA1500DF1537 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E5922C4BA1500DF1537 /* AppDelegate.m */; };
+		E32F6E5D22C4BA1500DF1537 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E5C22C4BA1500DF1537 /* SceneDelegate.m */; };
+		E32F6E6022C4BA1500DF1537 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E5F22C4BA1500DF1537 /* ViewController.m */; };
+		E32F6E6322C4BA1500DF1537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32F6E6122C4BA1500DF1537 /* Main.storyboard */; };
+		E32F6E6522C4BA1800DF1537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32F6E6422C4BA1800DF1537 /* Assets.xcassets */; };
+		E32F6E6822C4BA1800DF1537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32F6E6622C4BA1800DF1537 /* LaunchScreen.storyboard */; };
+		E32F6E6B22C4BA1800DF1537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6E6A22C4BA1800DF1537 /* main.m */; };
+		E32F6E6F22C4BA2E00DF1537 /* UltimateLog_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */; };
+		E32F6E7022C4BA2E00DF1537 /* UltimateLog_ObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E32F6F0F22C9B59800DF1537 /* ULZZArchiveEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EE422C9B59500DF1537 /* ULZZArchiveEntry.m */; };
+		E32F6F1022C9B59800DF1537 /* ULZZNewArchiveEntryWriter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EE522C9B59500DF1537 /* ULZZNewArchiveEntryWriter.mm */; };
+		E32F6F1122C9B59800DF1537 /* ULZZDataChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EE622C9B59500DF1537 /* ULZZDataChannel.m */; };
+		E32F6F1222C9B59800DF1537 /* ULZZConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EE722C9B59500DF1537 /* ULZZConstants.m */; };
+		E32F6F1322C9B59800DF1537 /* ULZZStandardCryptoEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EE822C9B59500DF1537 /* ULZZStandardCryptoEngine.h */; };
+		E32F6F1422C9B59800DF1537 /* ULZZArchiveEntryWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EE922C9B59500DF1537 /* ULZZArchiveEntryWriter.h */; };
+		E32F6F1522C9B59800DF1537 /* ULZZFileChannelOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EEA22C9B59500DF1537 /* ULZZFileChannelOutput.m */; };
+		E32F6F1622C9B59800DF1537 /* ULZZNewArchiveEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EEB22C9B59500DF1537 /* ULZZNewArchiveEntry.h */; };
+		E32F6F1722C9B59800DF1537 /* ULZZStoreOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EEC22C9B59500DF1537 /* ULZZStoreOutputStream.m */; };
+		E32F6F1822C9B59800DF1537 /* ULZZScopeGuard.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EED22C9B59500DF1537 /* ULZZScopeGuard.h */; };
+		E32F6F1922C9B59800DF1537 /* ULZZAESDecryptInputStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EEE22C9B59500DF1537 /* ULZZAESDecryptInputStream.mm */; };
+		E32F6F1A22C9B59800DF1537 /* ULZZOldArchiveEntryWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EEF22C9B59500DF1537 /* ULZZOldArchiveEntryWriter.h */; };
+		E32F6F1B22C9B59800DF1537 /* ULZZDataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF022C9B59600DF1537 /* ULZZDataProvider.h */; };
+		E32F6F1C22C9B59800DF1537 /* ULZZError.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EF122C9B59600DF1537 /* ULZZError.m */; };
+		E32F6F1D22C9B59800DF1537 /* ULZZDataChannelOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF222C9B59600DF1537 /* ULZZDataChannelOutput.h */; };
+		E32F6F1E22C9B59800DF1537 /* ULZZChannelOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF322C9B59600DF1537 /* ULZZChannelOutput.h */; };
+		E32F6F1F22C9B59800DF1537 /* ULZZStandardCryptoEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EF422C9B59600DF1537 /* ULZZStandardCryptoEngine.cpp */; };
+		E32F6F2022C9B59800DF1537 /* ULZZDataChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF522C9B59600DF1537 /* ULZZDataChannel.h */; };
+		E32F6F2122C9B59800DF1537 /* ULZZArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF622C9B59600DF1537 /* ULZZArchive.h */; };
+		E32F6F2222C9B59800DF1537 /* ULZZOldArchiveEntryWriter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EF722C9B59600DF1537 /* ULZZOldArchiveEntryWriter.mm */; };
+		E32F6F2322C9B59800DF1537 /* ULZZError.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF822C9B59600DF1537 /* ULZZError.h */; };
+		E32F6F2422C9B59800DF1537 /* ULZZFileChannelOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EF922C9B59600DF1537 /* ULZZFileChannelOutput.h */; };
+		E32F6F2522C9B59800DF1537 /* ULZZConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EFA22C9B59600DF1537 /* ULZZConstants.h */; };
+		E32F6F2622C9B59800DF1537 /* ULZZStandardDecryptInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EFB22C9B59600DF1537 /* ULZZStandardDecryptInputStream.h */; };
+		E32F6F2722C9B59800DF1537 /* ULZipZap.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EFC22C9B59600DF1537 /* ULZipZap.h */; };
+		E32F6F2822C9B59800DF1537 /* ULZZNewArchiveEntryWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6EFD22C9B59600DF1537 /* ULZZNewArchiveEntryWriter.h */; };
+		E32F6F2922C9B59800DF1537 /* ULZZOldArchiveEntry.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EFE22C9B59600DF1537 /* ULZZOldArchiveEntry.mm */; };
+		E32F6F2A22C9B59800DF1537 /* ULZZNewArchiveEntry.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6EFF22C9B59700DF1537 /* ULZZNewArchiveEntry.mm */; };
+		E32F6F2B22C9B59800DF1537 /* ULZZFileChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0022C9B59700DF1537 /* ULZZFileChannel.h */; };
+		E32F6F2C22C9B59800DF1537 /* ULZZInflateInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0122C9B59700DF1537 /* ULZZInflateInputStream.m */; };
+		E32F6F2D22C9B59800DF1537 /* ULZZStandardDecryptInputStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0222C9B59700DF1537 /* ULZZStandardDecryptInputStream.mm */; };
+		E32F6F2E22C9B59800DF1537 /* ULZZDeflateOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0322C9B59700DF1537 /* ULZZDeflateOutputStream.m */; };
+		E32F6F2F22C9B59800DF1537 /* ULZZArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0422C9B59700DF1537 /* ULZZArchive.mm */; };
+		E32F6F3022C9B59800DF1537 /* ULZZStoreOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0522C9B59700DF1537 /* ULZZStoreOutputStream.h */; };
+		E32F6F3122C9B59800DF1537 /* ULZZOldArchiveEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0622C9B59700DF1537 /* ULZZOldArchiveEntry.h */; };
+		E32F6F3222C9B59800DF1537 /* ULZZDeflateOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0722C9B59700DF1537 /* ULZZDeflateOutputStream.h */; };
+		E32F6F3322C9B59800DF1537 /* ULZZDataChannelOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0822C9B59700DF1537 /* ULZZDataChannelOutput.m */; };
+		E32F6F3422C9B59800DF1537 /* ULZZInflateInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0922C9B59700DF1537 /* ULZZInflateInputStream.h */; };
+		E32F6F3522C9B59800DF1537 /* ULZZFileChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6F0A22C9B59700DF1537 /* ULZZFileChannel.m */; };
+		E32F6F3622C9B59800DF1537 /* ULZZAESDecryptInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0B22C9B59700DF1537 /* ULZZAESDecryptInputStream.h */; };
+		E32F6F3722C9B59800DF1537 /* ULZZHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0C22C9B59700DF1537 /* ULZZHeaders.h */; };
+		E32F6F3822C9B59800DF1537 /* ULZZArchiveEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0D22C9B59700DF1537 /* ULZZArchiveEntry.h */; };
+		E32F6F3922C9B59800DF1537 /* ULZZChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6F0E22C9B59800DF1537 /* ULZZChannel.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E32F6E7122C4BA2E00DF1537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E32F6DD222C34B2F00DF1537 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E32F6DDA22C34B2F00DF1537;
+			remoteInfo = "UltimateLog-ObjC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E32F6E7322C4BA2E00DF1537 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E32F6E7022C4BA2E00DF1537 /* UltimateLog_ObjC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UltimateLog_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32F6DDE22C34B2F00DF1537 /* UltimateLog_ObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UltimateLog_ObjC.h; sourceTree = "<group>"; };
 		E32F6DDF22C34B2F00DF1537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E32F6DE722C34B5700DF1537 /* MarsWapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarsWapper.m; sourceTree = "<group>"; };
+		E32F6DE922C34B5700DF1537 /* log_crypt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log_crypt.cc; sourceTree = "<group>"; };
+		E32F6DEA22C34B5700DF1537 /* LogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogUtil.m; sourceTree = "<group>"; };
+		E32F6DEB22C34B5700DF1537 /* log_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log_crypt.h; sourceTree = "<group>"; };
+		E32F6DEC22C34B5700DF1537 /* LogHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LogHelper.mm; sourceTree = "<group>"; };
+		E32F6DED22C34B5700DF1537 /* LogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUtil.h; sourceTree = "<group>"; };
+		E32F6DEE22C34B5700DF1537 /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
+		E32F6DEF22C34B5700DF1537 /* UltimateLogOnMars.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UltimateLogOnMars.mm; sourceTree = "<group>"; };
+		E32F6DF022C34B5700DF1537 /* MarsWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsWapper.h; sourceTree = "<group>"; };
+		E32F6DF122C34B5700DF1537 /* UltimateLogOnMars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UltimateLogOnMars.h; sourceTree = "<group>"; };
+		E32F6DF422C34B5800DF1537 /* projdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projdef.h; sourceTree = "<group>"; };
+		E32F6DF522C34B5800DF1537 /* string_cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_cast.h; sourceTree = "<group>"; };
+		E32F6DF622C34B5800DF1537 /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		E32F6DF722C34B5800DF1537 /* has_member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = has_member.h; sourceTree = "<group>"; };
+		E32F6DF822C34B5800DF1537 /* comm_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comm_data.h; sourceTree = "<group>"; };
+		E32F6DF922C34B5800DF1537 /* verinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = verinfo.h; sourceTree = "<group>"; };
+		E32F6DFA22C34B5800DF1537 /* ThreadOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadOperationQueue.h; sourceTree = "<group>"; };
+		E32F6DFB22C34B5800DF1537 /* time_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_utils.h; sourceTree = "<group>"; };
+		E32F6DFC22C34B5800DF1537 /* nat64_prefix_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nat64_prefix_util.h; sourceTree = "<group>"; };
+		E32F6DFD22C34B5800DF1537 /* local_ipstack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = local_ipstack.h; sourceTree = "<group>"; };
+		E32F6DFE22C34B5800DF1537 /* scope_autoreleasepool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scope_autoreleasepool.h; sourceTree = "<group>"; };
+		E32F6DFF22C34B5800DF1537 /* strutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
+		E32F6E0122C34B5800DF1537 /* appender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appender.h; sourceTree = "<group>"; };
+		E32F6E0222C34B5800DF1537 /* xlogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlogger.h; sourceTree = "<group>"; };
+		E32F6E0322C34B5800DF1537 /* xloggerbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xloggerbase.h; sourceTree = "<group>"; };
+		E32F6E0422C34B5800DF1537 /* preprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preprocessor.h; sourceTree = "<group>"; };
+		E32F6E2222C34BBD00DF1537 /* libMars.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMars.a; sourceTree = "<group>"; };
+		E32F6E2522C34BDA00DF1537 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E32F6E2722C34BE300DF1537 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E32F6E2922C34BEC00DF1537 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		E32F6E2A22C34BF500DF1537 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		E32F6E2B22C34BFB00DF1537 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E32F6E2C22C34C0000DF1537 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E32F6E2E22C34C0500DF1537 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E32F6E3022C34C0F00DF1537 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E32F6E3222C34C2600DF1537 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		E32F6E3422C34DD600DF1537 /* UltimateLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UltimateLog.h; sourceTree = "<group>"; };
+		E32F6E3522C34DD600DF1537 /* UltimateLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UltimateLog.m; sourceTree = "<group>"; };
+		E32F6E3822C3608300DF1537 /* LoggerUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggerUtility.h; sourceTree = "<group>"; };
+		E32F6E3922C3608300DF1537 /* LoggerUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggerUtility.m; sourceTree = "<group>"; };
+		E32F6E3E22C3629A00DF1537 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		E32F6E3F22C3629A00DF1537 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		E32F6E4022C3629A00DF1537 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		E32F6E4122C3629A00DF1537 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		E32F6E4222C3629A00DF1537 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		E32F6E4322C3629A00DF1537 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		E32F6E4422C3629A00DF1537 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		E32F6E4522C3629A00DF1537 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		E32F6E4E22C3630000DF1537 /* NSString+CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonCrypto.h"; sourceTree = "<group>"; };
+		E32F6E4F22C3630000DF1537 /* NSString+CommonCrypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CommonCrypto.m"; sourceTree = "<group>"; };
+		E32F6E5622C4BA1500DF1537 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32F6E5822C4BA1500DF1537 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E32F6E5922C4BA1500DF1537 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E32F6E5B22C4BA1500DF1537 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E32F6E5C22C4BA1500DF1537 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E32F6E5E22C4BA1500DF1537 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E32F6E5F22C4BA1500DF1537 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E32F6E6222C4BA1500DF1537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E32F6E6422C4BA1800DF1537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E32F6E6722C4BA1800DF1537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E32F6E6922C4BA1800DF1537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E32F6E6A22C4BA1800DF1537 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E32F6EE422C9B59500DF1537 /* ULZZArchiveEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZArchiveEntry.m; sourceTree = "<group>"; };
+		E32F6EE522C9B59500DF1537 /* ULZZNewArchiveEntryWriter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZNewArchiveEntryWriter.mm; sourceTree = "<group>"; };
+		E32F6EE622C9B59500DF1537 /* ULZZDataChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZDataChannel.m; sourceTree = "<group>"; };
+		E32F6EE722C9B59500DF1537 /* ULZZConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZConstants.m; sourceTree = "<group>"; };
+		E32F6EE822C9B59500DF1537 /* ULZZStandardCryptoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZStandardCryptoEngine.h; sourceTree = "<group>"; };
+		E32F6EE922C9B59500DF1537 /* ULZZArchiveEntryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZArchiveEntryWriter.h; sourceTree = "<group>"; };
+		E32F6EEA22C9B59500DF1537 /* ULZZFileChannelOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZFileChannelOutput.m; sourceTree = "<group>"; };
+		E32F6EEB22C9B59500DF1537 /* ULZZNewArchiveEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZNewArchiveEntry.h; sourceTree = "<group>"; };
+		E32F6EEC22C9B59500DF1537 /* ULZZStoreOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZStoreOutputStream.m; sourceTree = "<group>"; };
+		E32F6EED22C9B59500DF1537 /* ULZZScopeGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZScopeGuard.h; sourceTree = "<group>"; };
+		E32F6EEE22C9B59500DF1537 /* ULZZAESDecryptInputStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZAESDecryptInputStream.mm; sourceTree = "<group>"; };
+		E32F6EEF22C9B59500DF1537 /* ULZZOldArchiveEntryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZOldArchiveEntryWriter.h; sourceTree = "<group>"; };
+		E32F6EF022C9B59600DF1537 /* ULZZDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZDataProvider.h; sourceTree = "<group>"; };
+		E32F6EF122C9B59600DF1537 /* ULZZError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZError.m; sourceTree = "<group>"; };
+		E32F6EF222C9B59600DF1537 /* ULZZDataChannelOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZDataChannelOutput.h; sourceTree = "<group>"; };
+		E32F6EF322C9B59600DF1537 /* ULZZChannelOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZChannelOutput.h; sourceTree = "<group>"; };
+		E32F6EF422C9B59600DF1537 /* ULZZStandardCryptoEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ULZZStandardCryptoEngine.cpp; sourceTree = "<group>"; };
+		E32F6EF522C9B59600DF1537 /* ULZZDataChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZDataChannel.h; sourceTree = "<group>"; };
+		E32F6EF622C9B59600DF1537 /* ULZZArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZArchive.h; sourceTree = "<group>"; };
+		E32F6EF722C9B59600DF1537 /* ULZZOldArchiveEntryWriter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZOldArchiveEntryWriter.mm; sourceTree = "<group>"; };
+		E32F6EF822C9B59600DF1537 /* ULZZError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZError.h; sourceTree = "<group>"; };
+		E32F6EF922C9B59600DF1537 /* ULZZFileChannelOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZFileChannelOutput.h; sourceTree = "<group>"; };
+		E32F6EFA22C9B59600DF1537 /* ULZZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZConstants.h; sourceTree = "<group>"; };
+		E32F6EFB22C9B59600DF1537 /* ULZZStandardDecryptInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZStandardDecryptInputStream.h; sourceTree = "<group>"; };
+		E32F6EFC22C9B59600DF1537 /* ULZipZap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZipZap.h; sourceTree = "<group>"; };
+		E32F6EFD22C9B59600DF1537 /* ULZZNewArchiveEntryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZNewArchiveEntryWriter.h; sourceTree = "<group>"; };
+		E32F6EFE22C9B59600DF1537 /* ULZZOldArchiveEntry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZOldArchiveEntry.mm; sourceTree = "<group>"; };
+		E32F6EFF22C9B59700DF1537 /* ULZZNewArchiveEntry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZNewArchiveEntry.mm; sourceTree = "<group>"; };
+		E32F6F0022C9B59700DF1537 /* ULZZFileChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZFileChannel.h; sourceTree = "<group>"; };
+		E32F6F0122C9B59700DF1537 /* ULZZInflateInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZInflateInputStream.m; sourceTree = "<group>"; };
+		E32F6F0222C9B59700DF1537 /* ULZZStandardDecryptInputStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZStandardDecryptInputStream.mm; sourceTree = "<group>"; };
+		E32F6F0322C9B59700DF1537 /* ULZZDeflateOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZDeflateOutputStream.m; sourceTree = "<group>"; };
+		E32F6F0422C9B59700DF1537 /* ULZZArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ULZZArchive.mm; sourceTree = "<group>"; };
+		E32F6F0522C9B59700DF1537 /* ULZZStoreOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZStoreOutputStream.h; sourceTree = "<group>"; };
+		E32F6F0622C9B59700DF1537 /* ULZZOldArchiveEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZOldArchiveEntry.h; sourceTree = "<group>"; };
+		E32F6F0722C9B59700DF1537 /* ULZZDeflateOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZDeflateOutputStream.h; sourceTree = "<group>"; };
+		E32F6F0822C9B59700DF1537 /* ULZZDataChannelOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZDataChannelOutput.m; sourceTree = "<group>"; };
+		E32F6F0922C9B59700DF1537 /* ULZZInflateInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZInflateInputStream.h; sourceTree = "<group>"; };
+		E32F6F0A22C9B59700DF1537 /* ULZZFileChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULZZFileChannel.m; sourceTree = "<group>"; };
+		E32F6F0B22C9B59700DF1537 /* ULZZAESDecryptInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZAESDecryptInputStream.h; sourceTree = "<group>"; };
+		E32F6F0C22C9B59700DF1537 /* ULZZHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZHeaders.h; sourceTree = "<group>"; };
+		E32F6F0D22C9B59700DF1537 /* ULZZArchiveEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZArchiveEntry.h; sourceTree = "<group>"; };
+		E32F6F0E22C9B59800DF1537 /* ULZZChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULZZChannel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +249,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32F6E2622C34BDA00DF1537 /* CoreTelephony.framework in Frameworks */,
+				E32F6E3122C34C0F00DF1537 /* UIKit.framework in Frameworks */,
+				E32F6E3322C34C3400DF1537 /* libz.tbd in Frameworks */,
+				E32F6E2F22C34C0500DF1537 /* SystemConfiguration.framework in Frameworks */,
+				E32F6E2822C34BE300DF1537 /* Foundation.framework in Frameworks */,
+				E32F6E2D22C34C0000DF1537 /* Security.framework in Frameworks */,
+				E32F6E2322C34BBD00DF1537 /* libMars.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E32F6E5322C4BA1500DF1537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32F6E6F22C4BA2E00DF1537 /* UltimateLog_ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,7 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				E32F6DDD22C34B2F00DF1537 /* UltimateLog-ObjC */,
+				E32F6E2122C34BBD00DF1537 /* Lib */,
+				E32F6E5722C4BA1500DF1537 /* TestApp */,
 				E32F6DDC22C34B2F00DF1537 /* Products */,
+				E32F6E2422C34BDA00DF1537 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */,
+				E32F6E5622C4BA1500DF1537 /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +293,191 @@
 		E32F6DDD22C34B2F00DF1537 /* UltimateLog-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				E32F6E3D22C3629A00DF1537 /* Encrypt */,
+				E32F6DE622C34B5700DF1537 /* XLog */,
+				E32F6DF222C34B5800DF1537 /* XLogHeader */,
 				E32F6DDE22C34B2F00DF1537 /* UltimateLog_ObjC.h */,
+				E32F6E3422C34DD600DF1537 /* UltimateLog.h */,
+				E32F6E3522C34DD600DF1537 /* UltimateLog.m */,
+				E32F6E3822C3608300DF1537 /* LoggerUtility.h */,
+				E32F6E3922C3608300DF1537 /* LoggerUtility.m */,
 				E32F6DDF22C34B2F00DF1537 /* Info.plist */,
 			);
 			path = "UltimateLog-ObjC";
+			sourceTree = "<group>";
+		};
+		E32F6DE622C34B5700DF1537 /* XLog */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6DE822C34B5700DF1537 /* Component */,
+				E32F6DE722C34B5700DF1537 /* MarsWapper.m */,
+				E32F6DEF22C34B5700DF1537 /* UltimateLogOnMars.mm */,
+				E32F6DF022C34B5700DF1537 /* MarsWapper.h */,
+				E32F6DF122C34B5700DF1537 /* UltimateLogOnMars.h */,
+			);
+			path = XLog;
+			sourceTree = "<group>";
+		};
+		E32F6DE822C34B5700DF1537 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6DE922C34B5700DF1537 /* log_crypt.cc */,
+				E32F6DEA22C34B5700DF1537 /* LogUtil.m */,
+				E32F6DEB22C34B5700DF1537 /* log_crypt.h */,
+				E32F6DEC22C34B5700DF1537 /* LogHelper.mm */,
+				E32F6DED22C34B5700DF1537 /* LogUtil.h */,
+				E32F6DEE22C34B5700DF1537 /* LogHelper.h */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E32F6DF222C34B5800DF1537 /* XLogHeader */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6DF322C34B5800DF1537 /* comm */,
+				E32F6E0022C34B5800DF1537 /* xlog */,
+			);
+			path = XLogHeader;
+			sourceTree = "<group>";
+		};
+		E32F6DF322C34B5800DF1537 /* comm */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6DF422C34B5800DF1537 /* projdef.h */,
+				E32F6DF522C34B5800DF1537 /* string_cast.h */,
+				E32F6DF622C34B5800DF1537 /* http.h */,
+				E32F6DF722C34B5800DF1537 /* has_member.h */,
+				E32F6DF822C34B5800DF1537 /* comm_data.h */,
+				E32F6DF922C34B5800DF1537 /* verinfo.h */,
+				E32F6DFA22C34B5800DF1537 /* ThreadOperationQueue.h */,
+				E32F6DFB22C34B5800DF1537 /* time_utils.h */,
+				E32F6DFC22C34B5800DF1537 /* nat64_prefix_util.h */,
+				E32F6DFD22C34B5800DF1537 /* local_ipstack.h */,
+				E32F6DFE22C34B5800DF1537 /* scope_autoreleasepool.h */,
+				E32F6DFF22C34B5800DF1537 /* strutil.h */,
+			);
+			path = comm;
+			sourceTree = "<group>";
+		};
+		E32F6E0022C34B5800DF1537 /* xlog */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6E0122C34B5800DF1537 /* appender.h */,
+				E32F6E0222C34B5800DF1537 /* xlogger.h */,
+				E32F6E0322C34B5800DF1537 /* xloggerbase.h */,
+				E32F6E0422C34B5800DF1537 /* preprocessor.h */,
+			);
+			path = xlog;
+			sourceTree = "<group>";
+		};
+		E32F6E2122C34BBD00DF1537 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6E8B22C9B52E00DF1537 /* ZipZap */,
+				E32F6E2222C34BBD00DF1537 /* libMars.a */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E32F6E2422C34BDA00DF1537 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6E3222C34C2600DF1537 /* libz.1.1.3.tbd */,
+				E32F6E3022C34C0F00DF1537 /* UIKit.framework */,
+				E32F6E2E22C34C0500DF1537 /* SystemConfiguration.framework */,
+				E32F6E2C22C34C0000DF1537 /* Security.framework */,
+				E32F6E2B22C34BFB00DF1537 /* libz.tbd */,
+				E32F6E2A22C34BF500DF1537 /* libresolv.9.tbd */,
+				E32F6E2922C34BEC00DF1537 /* libc++.tbd */,
+				E32F6E2722C34BE300DF1537 /* Foundation.framework */,
+				E32F6E2522C34BDA00DF1537 /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32F6E3D22C3629A00DF1537 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6E4222C3629A00DF1537 /* AESCrypt.h */,
+				E32F6E3F22C3629A00DF1537 /* AESCrypt.m */,
+				E32F6E4022C3629A00DF1537 /* NSData+Base64.h */,
+				E32F6E4522C3629A00DF1537 /* NSData+Base64.m */,
+				E32F6E4122C3629A00DF1537 /* NSData+CommonCrypto.h */,
+				E32F6E4422C3629A00DF1537 /* NSData+CommonCrypto.m */,
+				E32F6E4E22C3630000DF1537 /* NSString+CommonCrypto.h */,
+				E32F6E4F22C3630000DF1537 /* NSString+CommonCrypto.m */,
+				E32F6E4322C3629A00DF1537 /* NSString+Base64.h */,
+				E32F6E3E22C3629A00DF1537 /* NSString+Base64.m */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		E32F6E5722C4BA1500DF1537 /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6E5822C4BA1500DF1537 /* AppDelegate.h */,
+				E32F6E5922C4BA1500DF1537 /* AppDelegate.m */,
+				E32F6E5B22C4BA1500DF1537 /* SceneDelegate.h */,
+				E32F6E5C22C4BA1500DF1537 /* SceneDelegate.m */,
+				E32F6E5E22C4BA1500DF1537 /* ViewController.h */,
+				E32F6E5F22C4BA1500DF1537 /* ViewController.m */,
+				E32F6E6122C4BA1500DF1537 /* Main.storyboard */,
+				E32F6E6422C4BA1800DF1537 /* Assets.xcassets */,
+				E32F6E6622C4BA1800DF1537 /* LaunchScreen.storyboard */,
+				E32F6E6922C4BA1800DF1537 /* Info.plist */,
+				E32F6E6A22C4BA1800DF1537 /* main.m */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		E32F6E8B22C9B52E00DF1537 /* ZipZap */ = {
+			isa = PBXGroup;
+			children = (
+				E32F6F0B22C9B59700DF1537 /* ULZZAESDecryptInputStream.h */,
+				E32F6EEE22C9B59500DF1537 /* ULZZAESDecryptInputStream.mm */,
+				E32F6EF622C9B59600DF1537 /* ULZZArchive.h */,
+				E32F6F0422C9B59700DF1537 /* ULZZArchive.mm */,
+				E32F6F0D22C9B59700DF1537 /* ULZZArchiveEntry.h */,
+				E32F6EE422C9B59500DF1537 /* ULZZArchiveEntry.m */,
+				E32F6EE922C9B59500DF1537 /* ULZZArchiveEntryWriter.h */,
+				E32F6F0E22C9B59800DF1537 /* ULZZChannel.h */,
+				E32F6EF322C9B59600DF1537 /* ULZZChannelOutput.h */,
+				E32F6EFA22C9B59600DF1537 /* ULZZConstants.h */,
+				E32F6EE722C9B59500DF1537 /* ULZZConstants.m */,
+				E32F6EF522C9B59600DF1537 /* ULZZDataChannel.h */,
+				E32F6EE622C9B59500DF1537 /* ULZZDataChannel.m */,
+				E32F6EF222C9B59600DF1537 /* ULZZDataChannelOutput.h */,
+				E32F6F0822C9B59700DF1537 /* ULZZDataChannelOutput.m */,
+				E32F6EF022C9B59600DF1537 /* ULZZDataProvider.h */,
+				E32F6F0722C9B59700DF1537 /* ULZZDeflateOutputStream.h */,
+				E32F6F0322C9B59700DF1537 /* ULZZDeflateOutputStream.m */,
+				E32F6EF822C9B59600DF1537 /* ULZZError.h */,
+				E32F6EF122C9B59600DF1537 /* ULZZError.m */,
+				E32F6F0022C9B59700DF1537 /* ULZZFileChannel.h */,
+				E32F6F0A22C9B59700DF1537 /* ULZZFileChannel.m */,
+				E32F6EF922C9B59600DF1537 /* ULZZFileChannelOutput.h */,
+				E32F6EEA22C9B59500DF1537 /* ULZZFileChannelOutput.m */,
+				E32F6F0C22C9B59700DF1537 /* ULZZHeaders.h */,
+				E32F6F0922C9B59700DF1537 /* ULZZInflateInputStream.h */,
+				E32F6F0122C9B59700DF1537 /* ULZZInflateInputStream.m */,
+				E32F6EEB22C9B59500DF1537 /* ULZZNewArchiveEntry.h */,
+				E32F6EFF22C9B59700DF1537 /* ULZZNewArchiveEntry.mm */,
+				E32F6EFD22C9B59600DF1537 /* ULZZNewArchiveEntryWriter.h */,
+				E32F6EE522C9B59500DF1537 /* ULZZNewArchiveEntryWriter.mm */,
+				E32F6F0622C9B59700DF1537 /* ULZZOldArchiveEntry.h */,
+				E32F6EFE22C9B59600DF1537 /* ULZZOldArchiveEntry.mm */,
+				E32F6EEF22C9B59500DF1537 /* ULZZOldArchiveEntryWriter.h */,
+				E32F6EF722C9B59600DF1537 /* ULZZOldArchiveEntryWriter.mm */,
+				E32F6EED22C9B59500DF1537 /* ULZZScopeGuard.h */,
+				E32F6EF422C9B59600DF1537 /* ULZZStandardCryptoEngine.cpp */,
+				E32F6EE822C9B59500DF1537 /* ULZZStandardCryptoEngine.h */,
+				E32F6EFB22C9B59600DF1537 /* ULZZStandardDecryptInputStream.h */,
+				E32F6F0222C9B59700DF1537 /* ULZZStandardDecryptInputStream.mm */,
+				E32F6F0522C9B59700DF1537 /* ULZZStoreOutputStream.h */,
+				E32F6EEC22C9B59500DF1537 /* ULZZStoreOutputStream.m */,
+				E32F6EFC22C9B59600DF1537 /* ULZipZap.h */,
+			);
+			path = ZipZap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +487,60 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32F6E1122C34B5800DF1537 /* http.h in Headers */,
+				E32F6E3622C34DD600DF1537 /* UltimateLog.h in Headers */,
+				E32F6E1E22C34B5800DF1537 /* preprocessor.h in Headers */,
+				E32F6E0822C34B5800DF1537 /* log_crypt.h in Headers */,
+				E32F6F3722C9B59800DF1537 /* ULZZHeaders.h in Headers */,
+				E32F6E0D22C34B5800DF1537 /* MarsWapper.h in Headers */,
+				E32F6E1622C34B5800DF1537 /* time_utils.h in Headers */,
+				E32F6F2622C9B59800DF1537 /* ULZZStandardDecryptInputStream.h in Headers */,
+				E32F6E1222C34B5800DF1537 /* has_member.h in Headers */,
+				E32F6F3622C9B59800DF1537 /* ULZZAESDecryptInputStream.h in Headers */,
+				E32F6E1422C34B5800DF1537 /* verinfo.h in Headers */,
+				E32F6F2322C9B59800DF1537 /* ULZZError.h in Headers */,
+				E32F6F3022C9B59800DF1537 /* ULZZStoreOutputStream.h in Headers */,
+				E32F6E4822C3629A00DF1537 /* NSData+Base64.h in Headers */,
+				E32F6E5022C3630000DF1537 /* NSString+CommonCrypto.h in Headers */,
+				E32F6F2422C9B59800DF1537 /* ULZZFileChannelOutput.h in Headers */,
+				E32F6E0E22C34B5800DF1537 /* UltimateLogOnMars.h in Headers */,
+				E32F6F1322C9B59800DF1537 /* ULZZStandardCryptoEngine.h in Headers */,
+				E32F6E3A22C3608300DF1537 /* LoggerUtility.h in Headers */,
+				E32F6F3222C9B59800DF1537 /* ULZZDeflateOutputStream.h in Headers */,
 				E32F6DE022C34B2F00DF1537 /* UltimateLog_ObjC.h in Headers */,
+				E32F6E1922C34B5800DF1537 /* scope_autoreleasepool.h in Headers */,
+				E32F6F2022C9B59800DF1537 /* ULZZDataChannel.h in Headers */,
+				E32F6F1B22C9B59800DF1537 /* ULZZDataProvider.h in Headers */,
+				E32F6F2822C9B59800DF1537 /* ULZZNewArchiveEntryWriter.h in Headers */,
+				E32F6E1522C34B5800DF1537 /* ThreadOperationQueue.h in Headers */,
+				E32F6E1D22C34B5800DF1537 /* xloggerbase.h in Headers */,
+				E32F6F1D22C9B59800DF1537 /* ULZZDataChannelOutput.h in Headers */,
+				E32F6E1B22C34B5800DF1537 /* appender.h in Headers */,
+				E32F6F3922C9B59800DF1537 /* ULZZChannel.h in Headers */,
+				E32F6F2722C9B59800DF1537 /* ULZipZap.h in Headers */,
+				E32F6F2122C9B59800DF1537 /* ULZZArchive.h in Headers */,
+				E32F6E1A22C34B5800DF1537 /* strutil.h in Headers */,
+				E32F6F2522C9B59800DF1537 /* ULZZConstants.h in Headers */,
+				E32F6E1022C34B5800DF1537 /* string_cast.h in Headers */,
+				E32F6E0A22C34B5800DF1537 /* LogUtil.h in Headers */,
+				E32F6E0F22C34B5800DF1537 /* projdef.h in Headers */,
+				E32F6E1C22C34B5800DF1537 /* xlogger.h in Headers */,
+				E32F6E4A22C3629A00DF1537 /* AESCrypt.h in Headers */,
+				E32F6F3122C9B59800DF1537 /* ULZZOldArchiveEntry.h in Headers */,
+				E32F6F1422C9B59800DF1537 /* ULZZArchiveEntryWriter.h in Headers */,
+				E32F6E1322C34B5800DF1537 /* comm_data.h in Headers */,
+				E32F6E4B22C3629A00DF1537 /* NSString+Base64.h in Headers */,
+				E32F6F3422C9B59800DF1537 /* ULZZInflateInputStream.h in Headers */,
+				E32F6E1722C34B5800DF1537 /* nat64_prefix_util.h in Headers */,
+				E32F6F3822C9B59800DF1537 /* ULZZArchiveEntry.h in Headers */,
+				E32F6F1A22C9B59800DF1537 /* ULZZOldArchiveEntryWriter.h in Headers */,
+				E32F6E1822C34B5800DF1537 /* local_ipstack.h in Headers */,
+				E32F6E0B22C34B5800DF1537 /* LogHelper.h in Headers */,
+				E32F6F1622C9B59800DF1537 /* ULZZNewArchiveEntry.h in Headers */,
+				E32F6F1E22C9B59800DF1537 /* ULZZChannelOutput.h in Headers */,
+				E32F6E4922C3629A00DF1537 /* NSData+CommonCrypto.h in Headers */,
+				E32F6F1822C9B59800DF1537 /* ULZZScopeGuard.h in Headers */,
+				E32F6F2B22C9B59800DF1537 /* ULZZFileChannel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +565,25 @@
 			productReference = E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E32F6E5522C4BA1500DF1537 /* TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E32F6E6C22C4BA1800DF1537 /* Build configuration list for PBXNativeTarget "TestApp" */;
+			buildPhases = (
+				E32F6E5222C4BA1500DF1537 /* Sources */,
+				E32F6E5322C4BA1500DF1537 /* Frameworks */,
+				E32F6E5422C4BA1500DF1537 /* Resources */,
+				E32F6E7322C4BA2E00DF1537 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E32F6E7222C4BA2E00DF1537 /* PBXTargetDependency */,
+			);
+			name = TestApp;
+			productName = TestApp;
+			productReference = E32F6E5622C4BA1500DF1537 /* TestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +594,9 @@
 				ORGANIZATIONNAME = Peigen.Liu;
 				TargetAttributes = {
 					E32F6DDA22C34B2F00DF1537 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E32F6E5522C4BA1500DF1537 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -112,6 +615,7 @@
 			projectRoot = "";
 			targets = (
 				E32F6DDA22C34B2F00DF1537 /* UltimateLog-ObjC */,
+				E32F6E5522C4BA1500DF1537 /* TestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +628,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E32F6E5422C4BA1500DF1537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32F6E6822C4BA1800DF1537 /* LaunchScreen.storyboard in Resources */,
+				E32F6E6522C4BA1800DF1537 /* Assets.xcassets in Resources */,
+				E32F6E6322C4BA1500DF1537 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,10 +645,78 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32F6F2C22C9B59800DF1537 /* ULZZInflateInputStream.m in Sources */,
+				E32F6F1522C9B59800DF1537 /* ULZZFileChannelOutput.m in Sources */,
+				E32F6F1022C9B59800DF1537 /* ULZZNewArchiveEntryWriter.mm in Sources */,
+				E32F6F1922C9B59800DF1537 /* ULZZAESDecryptInputStream.mm in Sources */,
+				E32F6E0C22C34B5800DF1537 /* UltimateLogOnMars.mm in Sources */,
+				E32F6F3322C9B59800DF1537 /* ULZZDataChannelOutput.m in Sources */,
+				E32F6E0522C34B5800DF1537 /* MarsWapper.m in Sources */,
+				E32F6F2922C9B59800DF1537 /* ULZZOldArchiveEntry.mm in Sources */,
+				E32F6E4C22C3629A00DF1537 /* NSData+CommonCrypto.m in Sources */,
+				E32F6E5122C3630000DF1537 /* NSString+CommonCrypto.m in Sources */,
+				E32F6F2222C9B59800DF1537 /* ULZZOldArchiveEntryWriter.mm in Sources */,
+				E32F6F2D22C9B59800DF1537 /* ULZZStandardDecryptInputStream.mm in Sources */,
+				E32F6F2E22C9B59800DF1537 /* ULZZDeflateOutputStream.m in Sources */,
+				E32F6E4D22C3629A00DF1537 /* NSData+Base64.m in Sources */,
+				E32F6E0622C34B5800DF1537 /* log_crypt.cc in Sources */,
+				E32F6E3B22C3608300DF1537 /* LoggerUtility.m in Sources */,
+				E32F6E4622C3629A00DF1537 /* NSString+Base64.m in Sources */,
+				E32F6E0922C34B5800DF1537 /* LogHelper.mm in Sources */,
+				E32F6F1122C9B59800DF1537 /* ULZZDataChannel.m in Sources */,
+				E32F6F1F22C9B59800DF1537 /* ULZZStandardCryptoEngine.cpp in Sources */,
+				E32F6F3522C9B59800DF1537 /* ULZZFileChannel.m in Sources */,
+				E32F6F1C22C9B59800DF1537 /* ULZZError.m in Sources */,
+				E32F6F2A22C9B59800DF1537 /* ULZZNewArchiveEntry.mm in Sources */,
+				E32F6E0722C34B5800DF1537 /* LogUtil.m in Sources */,
+				E32F6F1222C9B59800DF1537 /* ULZZConstants.m in Sources */,
+				E32F6F0F22C9B59800DF1537 /* ULZZArchiveEntry.m in Sources */,
+				E32F6E4722C3629A00DF1537 /* AESCrypt.m in Sources */,
+				E32F6F2F22C9B59800DF1537 /* ULZZArchive.mm in Sources */,
+				E32F6E3722C34DD600DF1537 /* UltimateLog.m in Sources */,
+				E32F6F1722C9B59800DF1537 /* ULZZStoreOutputStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E32F6E5222C4BA1500DF1537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32F6E6022C4BA1500DF1537 /* ViewController.m in Sources */,
+				E32F6E5A22C4BA1500DF1537 /* AppDelegate.m in Sources */,
+				E32F6E6B22C4BA1800DF1537 /* main.m in Sources */,
+				E32F6E5D22C4BA1500DF1537 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E32F6E7222C4BA2E00DF1537 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E32F6DDA22C34B2F00DF1537 /* UltimateLog-ObjC */;
+			targetProxy = E32F6E7122C4BA2E00DF1537 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E32F6E6122C4BA1500DF1537 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E32F6E6222C4BA1500DF1537 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E32F6E6622C4BA1800DF1537 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E32F6E6722C4BA1800DF1537 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E32F6DE122C34B2F00DF1537 /* Debug */ = {
@@ -269,9 +851,15 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UltimateLog-ObjC/XLog",
+					"$(PROJECT_DIR)/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IOFT.UltimateLog-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -292,9 +880,49 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UltimateLog-ObjC/XLog",
+					"$(PROJECT_DIR)/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IOFT.UltimateLog-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E32F6E6D22C4BA1800DF1537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7X277FCB8S;
+				INFOPLIST_FILE = TestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOFT.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E32F6E6E22C4BA1800DF1537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7X277FCB8S;
+				INFOPLIST_FILE = TestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IOFT.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -316,6 +944,15 @@
 			buildConfigurations = (
 				E32F6DE422C34B2F00DF1537 /* Debug */,
 				E32F6DE522C34B2F00DF1537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E32F6E6C22C4BA1800DF1537 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E32F6E6D22C4BA1800DF1537 /* Debug */,
+				E32F6E6E22C4BA1800DF1537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
