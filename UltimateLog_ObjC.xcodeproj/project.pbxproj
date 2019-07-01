@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E32F6F3A22C9DF2C00DF1537 /* Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E32F6F3B22C9DF2C00DF1537 /* Build configuration list for PBXAggregateTarget "Universal" */;
+			buildPhases = (
+				E32F6F3E22C9DF3500DF1537 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Universal;
+			productName = Universal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		E32F6DE022C34B2F00DF1537 /* UltimateLog_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = E32F6DDE22C34B2F00DF1537 /* UltimateLog_ObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E32F6E0522C34B5800DF1537 /* MarsWapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E32F6DE722C34B5700DF1537 /* MarsWapper.m */; };
@@ -547,9 +561,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E32F6DDA22C34B2F00DF1537 /* UltimateLog-ObjC */ = {
+		E32F6DDA22C34B2F00DF1537 /* UltimateLog_ObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E32F6DE322C34B2F00DF1537 /* Build configuration list for PBXNativeTarget "UltimateLog-ObjC" */;
+			buildConfigurationList = E32F6DE322C34B2F00DF1537 /* Build configuration list for PBXNativeTarget "UltimateLog_ObjC" */;
 			buildPhases = (
 				E32F6DD622C34B2F00DF1537 /* Headers */,
 				E32F6DD722C34B2F00DF1537 /* Sources */,
@@ -560,7 +574,7 @@
 			);
 			dependencies = (
 			);
-			name = "UltimateLog-ObjC";
+			name = UltimateLog_ObjC;
 			productName = "UltimateLog-ObjC";
 			productReference = E32F6DDB22C34B2F00DF1537 /* UltimateLog_ObjC.framework */;
 			productType = "com.apple.product-type.framework";
@@ -599,9 +613,12 @@
 					E32F6E5522C4BA1500DF1537 = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					E32F6F3A22C9DF2C00DF1537 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
-			buildConfigurationList = E32F6DD522C34B2F00DF1537 /* Build configuration list for PBXProject "UltimateLog-ObjC" */;
+			buildConfigurationList = E32F6DD522C34B2F00DF1537 /* Build configuration list for PBXProject "UltimateLog_ObjC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -614,8 +631,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E32F6DDA22C34B2F00DF1537 /* UltimateLog-ObjC */,
+				E32F6DDA22C34B2F00DF1537 /* UltimateLog_ObjC */,
 				E32F6E5522C4BA1500DF1537 /* TestApp */,
+				E32F6F3A22C9DF2C00DF1537 /* Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -639,6 +657,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E32F6F3E22C9DF3500DF1537 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\n#set -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=${PROJECT_NAME}\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/Framework\" ]; then\nrm -rf \"${SRCROOT}/Framework\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${SRCROOT}/Framework/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${SRCROOT}/Framework/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\nmkdir \"${SRCROOT}/Framework/\"\ncp -R \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${SRCROOT}/Framework/${FRAMEWORK_NAME}.framework\"\n\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${SRCROOT}/Framework/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${SRCROOT}/Framework/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\n#if [ -d \"${SRCROOT}/build\" ]; then\n#rm -rf \"${SRCROOT}/build\"\n#fi\n#open \"${INSTALL_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E32F6DD722C34B2F00DF1537 /* Sources */ = {
@@ -694,7 +732,7 @@
 /* Begin PBXTargetDependency section */
 		E32F6E7222C4BA2E00DF1537 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E32F6DDA22C34B2F00DF1537 /* UltimateLog-ObjC */;
+			target = E32F6DDA22C34B2F00DF1537 /* UltimateLog_ObjC */;
 			targetProxy = E32F6E7122C4BA2E00DF1537 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -754,6 +792,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -815,6 +854,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -927,10 +967,28 @@
 			};
 			name = Release;
 		};
+		E32F6F3C22C9DF2C00DF1537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7X277FCB8S;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E32F6F3D22C9DF2C00DF1537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7X277FCB8S;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E32F6DD522C34B2F00DF1537 /* Build configuration list for PBXProject "UltimateLog-ObjC" */ = {
+		E32F6DD522C34B2F00DF1537 /* Build configuration list for PBXProject "UltimateLog_ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32F6DE122C34B2F00DF1537 /* Debug */,
@@ -939,7 +997,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E32F6DE322C34B2F00DF1537 /* Build configuration list for PBXNativeTarget "UltimateLog-ObjC" */ = {
+		E32F6DE322C34B2F00DF1537 /* Build configuration list for PBXNativeTarget "UltimateLog_ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32F6DE422C34B2F00DF1537 /* Debug */,
@@ -953,6 +1011,15 @@
 			buildConfigurations = (
 				E32F6E6D22C4BA1800DF1537 /* Debug */,
 				E32F6E6E22C4BA1800DF1537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E32F6F3B22C9DF2C00DF1537 /* Build configuration list for PBXAggregateTarget "Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E32F6F3C22C9DF2C00DF1537 /* Debug */,
+				E32F6F3D22C9DF2C00DF1537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

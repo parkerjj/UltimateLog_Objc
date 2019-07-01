@@ -1,0 +1,6 @@
+framework module UltimateLog_ObjC {
+  umbrella header "UltimateLog_ObjC.h"
+
+  export *
+  module * { export * }
+}
